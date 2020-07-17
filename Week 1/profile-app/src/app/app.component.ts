@@ -16,9 +16,8 @@ import { Component } from '@angular/core';
 
 /* Creating and exporting variables */
 export class AppComponent {
-  assignment = 'Assignment 1.5 - Components';
-  image = 'My Image';
-  details = 'My Details';
+  isLoggedIn: Boolean = true;
+  assignment: string = "Exercise 2.3 - Data Binding";
 }
 
 
