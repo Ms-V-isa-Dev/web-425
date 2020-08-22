@@ -1,0 +1,41 @@
+<!--
+=============================================
+; Title: Assignment 7.2
+; Author: Verlee Washington
+; Date: 08/19/2020
+; Description: Base-layout.html
+;============================================
+-->
+
+<mat-toolbar color="primary">
+
+  <mat-toolbar-row>
+
+    <div class='logo'>
+      <img src="./assets/gpa-calculator-app.png" height="80" />
+    </div>
+
+    <div style="width: 80%">
+      <div fxLayout="row wrap" fxLayoutAlign="end start">
+        <button mat-button routerLink="/">Home</button>
+        <button mat-button (click)="signOut()">Sign Out</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br />
+
+<div fxLayout="row wrap">
+  <div fxFlex>
+
+    <mat-card-title>{{ assignment }}</mat-card-title>
+    <br /><br />
+
+    <mat-card-content>
+      <router-outlet></router-outlet>
+    </mat-card-content>
+  </div>
+</div>
+
+
