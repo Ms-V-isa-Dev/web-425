@@ -1,3 +1,9 @@
+/**
+ * Title: Assignment 9.3
+ * Author: Verlee Washington
+ * Date: 09/9/2020
+ * Description: app modules
+ */
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';

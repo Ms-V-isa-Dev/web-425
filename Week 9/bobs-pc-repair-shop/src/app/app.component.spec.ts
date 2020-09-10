@@ -1,3 +1,10 @@
+/**
+ * Title: Assignment 9.3
+ * Author: Verlee Washington
+ * Date: 09/9/2020
+ * Description: app components
+ */
+
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
