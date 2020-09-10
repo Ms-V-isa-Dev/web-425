@@ -1,0 +1,39 @@
+<!--
+=============================================
+; Title: Assignment 9.2
+; Author: Verlee Washington
+; Date: 09/08/2020
+; Description: Home
+;============================================
+-->
+
+<div fxLayout="column" fxLayoutGap="10px">
+  <br />
+  <h2 fxFlex style="text-align: center;">Services</h2>
+
+  <div fxFlex>
+    <mat-card style="width: 50%; margin: auto;">
+
+      <form [formGroup]="serviceForm" (ngSubmit)="onSubmit(); serviceForm.reset();">
+
+        <mat-card-content>
+          <div fxLayout="column" fxLayoutGap="10px">
+            <div fxFlex formArrayName = "serviceOptions" *ngFor = "let service of serviceForm.controls.serviceOptions['controls']; let i = index">
+              <mat-checkbox formControlName ="{{i}}">
+                {{ repairServices[i].id }}: {{ repairServices[i].title }}: {{ repairServices[i].price | currency}}
+              </mat-checkbox>
+              <br />
+            </div>
+          </div>
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+          <button type="submit" mat-raised-button color="primary">Submit</button>
+        </mat-card-actions>
+
+      </form>
+     </mat-card>
+
+  </div>
+</div>
+
