@@ -1,11 +1,31 @@
-<div fxLayout= 'column'>
-  <div fxFlex>
-
-    <mat-card-title>
-      Order Summary
-    </mat-card-title>
-
-    <mat-card-content>
-
-    </mat-card-content>
-  </div>
+<!--
+=============================================
+; Title: Assignment 9.2
+; Author: Professor Krasso
+; Modified by: Verlee Washington
+; Date: 09/08/2020
+; Description: order summary
+;============================================
+-->
+<mat-card>
+  <mat-card-title>Invoice ID: {{ invoiceId }}</mat-card-title>
+  <mat-card-content>
+    <div fxLayout="column">
+      <table class="left-text">
+        <tr>
+          <th>Description</th><th>Price</th>
+        </tr>
+        <tr *ngFor="let item of list">
+          <td>{{item.name}}</td><td>{{item.price | currency }}</td>
+        </tr>
+        <tr>
+          <td>Parts and Labor</td><td>{{ partsAndLabor | currency }}</td>
+        </tr>
+      </table>
+      <p>Order Total: {{ total | currency }}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent" matDialogClose="confirm">OK</button>
+  </mat-card-actions>
+</mat-card>

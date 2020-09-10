@@ -1,14 +1,16 @@
 /**
- * Title: Assignment 9.
+ * Title: Assignment 9.3
  * Author: Verlee Washington
- * Date: 09/8/2020
+ * Date: 09/9/2020
  * Description: home components
  */
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, FormControl, FormArray, CheckboxRequiredValidator, Validators } from '@angular/forms';
 import { IRepairService } from '../repair-service.interface';
+//import { OrderSummaryDialogComponent } from '../order-summary-dialog/order-summary-dialog.component';
 
 
 @Component({
@@ -93,6 +95,8 @@ export class HomeComponent implements OnInit {
     .map((checked, index) => checked ? this.repairServices[index] : null)
     .filter(v => v !== null);
 
+
+    //this.dialog.open(OrderSummaryDialogComponent)
     // writes the selected objects to the browsers console window
     console.log(this.selectedServices);
   }
