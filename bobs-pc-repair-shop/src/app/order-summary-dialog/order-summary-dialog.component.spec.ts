@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotFoundComponent } from './not-found.component';
+import { OrderSummaryDialogComponent } from './order-summary-dialog.component';
 
-describe('NotFoundComponent', () => {
-  let component: NotFoundComponent;
-  let fixture: ComponentFixture<NotFoundComponent>;
+describe('OrderSummaryDialogComponent', () => {
+  let component: OrderSummaryDialogComponent;
+  let fixture: ComponentFixture<OrderSummaryDialogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotFoundComponent ]
+      declarations: [ OrderSummaryDialogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NotFoundComponent);
+    fixture = TestBed.createComponent(OrderSummaryDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
